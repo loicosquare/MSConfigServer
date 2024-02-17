@@ -12,7 +12,7 @@ ENTRYPOINT ["java", "-jar", "/svc-configserver.jar"]
 # Exposer le port 8085
 EXPOSE 8085
 
-#docker build -t loicsanou/configserver:0.0.1 .
-#docker run -d -p 8085:8085 --name configserver <imageId>
+#docker build -t loicsanou/svc-configserver:0.0.1 .
+#docker run -d -p8085:8085 -e EUREKA_SERVER_ADDRESS=http://host.docker.internal:8761/eureka --name svc-configserver <imageId>
 #docker logs containerId
-#docker push loicsanou/configserver:0.0.1
+#docker push loicsanou/svc-configserver:0.0.1
